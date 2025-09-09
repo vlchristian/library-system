@@ -1,0 +1,10 @@
+# Mark platform-specific folders as vendored so GitHub language stats ignore them
+/windows/* linguist-vendored
+/linux/* linguist-vendored
+/macos/* linguist-vendored
+/android/* linguist-vendored
+/ios/* linguist-vendored
+
+# Optionally, ignore build outputs too
+/build/* linguist-vendored
+/.dart_tool/* linguist-vendored
