@@ -1,33 +1,14 @@
-# Mark Dart files as Dart
-*.dart linguist-language=Dart
+# Ignore Flutter build files and generated files for language stats
+build/* linguist-vendored
+.dart_tool/* linguist-vendored
+.flutter-plugins-dependencies linguist-vendored
+.flutter-plugins linguist-vendored
+.pub-cache/* linguist-vendored
+pubspec.lock linguist-vendored
 
-# Flutter/YAML config files
-*.yaml linguist-language=YAML
-
-# Gradle/Kotlin for Android
-*.gradle linguist-language=Groovy
-*.kts linguist-language=Kotlin
-
-# iOS/Swift/Objective-C files
-*.swift linguist-language=Swift
-*.m linguist-language=Objective-C
-*.h linguist-language=C
-*.mm linguist-language=Objective-C++
-*.pch linguist-language=C
-
-# C/C++ files generated for desktop platforms
-*.c linguist-language=C
-*.cpp linguist-language=C++
-*.cc linguist-language=C++
-*.h linguist-language=C++
-*.hpp linguist-language=C++
-
-# Ignore generated Flutter build files completely for language stats
-/build/* linguist-vendored
-/.dart_tool/* linguist-vendored
-/.pub-cache/* linguist-vendored
-/android/app/build/* linguist-vendored
-/ios/Flutter/* linguist-vendored
-/linux/flutter/* linguist-vendored
-/macos/Flutter/* linguist-vendored
-/windows/flutter/* linguist-vendored
+# Mark platform folders as vendored
+android/* linguist-vendored
+ios/* linguist-vendored
+linux/* linguist-vendored
+macos/* linguist-vendored
+windows/* linguist-vendored
