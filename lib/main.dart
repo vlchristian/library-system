@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_system/views/library_screen.dart';
+import 'package:library_system/views/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.dark,
         ),
       ),
-      home: LibraryScreen(),
+      home: LoginScreen(),
     );
   }
 }

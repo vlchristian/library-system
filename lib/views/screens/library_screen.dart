@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_system/models/borrower.dart';
+import 'package:library_system/data/borrower.dart';
 
 class LibraryScreen extends StatefulWidget {
   const LibraryScreen({super.key});
