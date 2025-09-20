@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:library_system/views/screens/library_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -55,6 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
             backgroundColor: Colors.green.shade400,
           ),
         );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryScreen(),));
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
