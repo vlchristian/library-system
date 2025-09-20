@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_system/views/screens/library_screen.dart';
+import 'package:library_system/views/screens/userprofile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -24,23 +24,25 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  //! username and passowrd
+  //! username and password
   final String _username = 'admin';
   final String _password = 'admin123';
   //! validate username
   String? validateUsername(String? value) {
-    final value0 = value?.trim() ?? '';
-    if (value0.isEmpty) return 'Please enter your username';
-    if (value0.contains(' ')) return 'No spaces allowed';
-    if (value0.length < 3) return 'Username must be at least 3 characters';
+    final usernameValue = value?.trim() ?? '';
+    if (usernameValue.isEmpty) return 'Please enter your username';
+    if (usernameValue.contains(' ')) return 'No spaces allowed';
+    if (usernameValue.length < 3)
+      return 'Username must be at least 3 characters';
     return null;
   }
 
   //! validate password
   String? validatePassword(String? value) {
-    final value0 = value ?? '';
-    if (value0.isEmpty) return 'Please enter your password';
-    if (value0.length < 6) return 'Password must be at least 6 characters';
+    final passwordValue = value ?? '';
+    if (passwordValue.isEmpty) return 'Please enter your password';
+    if (passwordValue.length < 6)
+      return 'Password must be at least 6 characters';
     return null;
   }
 
@@ -56,7 +58,10 @@ class _LoginScreenState extends State<LoginScreen> {
             backgroundColor: Colors.green.shade400,
           ),
         );
-        Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryScreen(),));
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => UserProfileScreen()),
+        );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
